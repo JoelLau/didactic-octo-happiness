@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TransactionsPageComponent } from './transactions-page/transactions-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: TransactionsPageComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class TransactionsRoutingModule { }
+export class TransactionsRoutingModule {}
