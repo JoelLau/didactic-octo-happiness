@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "nx",
-    "postinstall": "node ./decorate-angular-cli.js",
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "build": "nx run-many --parallel --target=build",
+    "e2e": "nx run-many --parallel --target=e2e",
+    "lint": "nx run-many --parallel --target=lint",
+    "start": "nx run-many --parallel --target=serve",
+    "test": "nx run-many --parallel --target=test",
+    "postinstall": "node ./decorate-angular-cli.js"
   },
   "private": true,
   "dependencies": {
