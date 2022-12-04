@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TRANSACTIONS_PAGE_TEST_IDS } from './testing';
 
 @Component({
   selector: 'didactic-octo-happiness-transactions-page',
