@@ -2,5 +2,7 @@
   type="file"
   name="file-input-upload"
   id="file-input-upload"
-  data-testid="file-input-upload"
+  [attr.data-testid]="TEST_IDS.FILE_INPUT_UPLOAD"
+  accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  (change)="onFileChange($event)"
 />
